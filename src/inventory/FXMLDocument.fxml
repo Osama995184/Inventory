@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="502.0" maxWidth="600.0" minHeight="500.0" minWidth="600.0" prefHeight="502.0" prefWidth="601.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inventory.FXMLDocumentController">
+    <children>
+        <AnchorPane prefHeight="200.0" prefWidth="734.0">
+            <children>
+                <AnchorPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                        <AnchorPane fx:id="si_loginForm" cacheShape="false" centerShape="false" layoutX="300.0" prefHeight="405.0" prefWidth="300.0" scaleShape="false" styleClass="white-form" stylesheets="@loginDesign.css" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <children>
+                                <Label alignment="CENTER" layoutX="114.0" layoutY="84.0" nodeOrientation="RIGHT_TO_LEFT" styleClass="head-label" stylesheets="@loginDesign.css" text="تسجيل الدخول" textFill="#1c1c1c" AnchorPane.leftAnchor="114.0" AnchorPane.rightAnchor="42.0">
+                                    <font>
+                                        <Font name="System Bold" size="20.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="si_username" alignment="CENTER_RIGHT" layoutX="40.0" layoutY="200.0" prefHeight="38.0" prefWidth="221.0" promptText="اسم المستخدم" styleClass="textfield" stylesheets="@loginDesign.css" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" />
+                                <PasswordField fx:id="si_password" alignment="CENTER_RIGHT" layoutX="40.0" layoutY="254.0" prefHeight="38.0" prefWidth="221.0" promptText="كلمة المرور" styleClass="textfield" stylesheets="@loginDesign.css" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" />
+                                <Button fx:id="si_loginBtn" 
+                                        layoutX="74.0" 
+                                        layoutY="397.0" 
+                                        mnemonicParsing="false" 
+                                        onAction="#loginBTN" 
+                                        prefHeight="45.0" 
+                                        prefWidth="152.0" 
+                                        styleClass="login-btn" 
+                                        stylesheets="@loginDesign.css" 
+                                        text="تسجيل الدخول" 
+                                        AnchorPane.leftAnchor="74.0" 
+                                        AnchorPane.rightAnchor="74.0"
+                                        defaultButton="true">
+                                    <font>
+                                        <Font name="System Bold" size="15.0" />
+                                    </font>
+                                </Button>
+                                <Hyperlink fx:id="si_forgorPass" alignment="CENTER_RIGHT" layoutX="40.0" layoutY="292.0" onAction="#switchForgotPass" prefHeight="29.0" prefWidth="220.0" text="نسيت كلمة المرور" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" />
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="su_signupForm" layoutX="5.0" layoutY="4.0" prefHeight="405.0" prefWidth="300.0" styleClass="white-form" stylesheets="@loginDesign.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="300.0" AnchorPane.topAnchor="0.0">
+                            <children>
+                                <Label alignment="CENTER" layoutX="79.0" layoutY="44.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="30.0" prefWidth="135.0" styleClass="head-label" stylesheets="@loginDesign.css" text="تسجيل حساب" textFill="#1c1c1c" AnchorPane.leftAnchor="114.0" AnchorPane.rightAnchor="42.0">
+                                    <font>
+                                        <Font name="System Bold" size="20.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="su_username" alignment="CENTER_RIGHT" layoutX="41.0" layoutY="145.0" prefHeight="38.0" prefWidth="221.0" promptText="اسم المستخدم" styleClass="textfield" stylesheets="@loginDesign.css" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" />
+                                <PasswordField fx:id="su_password" alignment="CENTER_RIGHT" layoutX="41.0" layoutY="200.0" prefHeight="38.0" prefWidth="221.0" promptText="كلمة المرور" styleClass="textfield" stylesheets="@loginDesign.css" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" />
+                                <ComboBox fx:id="su_question" layoutX="41.0" layoutY="254.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="38.0" prefWidth="221.0" promptText="سؤال" styleClass="textfield" stylesheets="@loginDesign.css" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" />
+                                <TextField fx:id="su_answer" alignment="CENTER_RIGHT" layoutX="41.0" layoutY="308.0" prefHeight="38.0" prefWidth="221.0" promptText="الاجابة" styleClass="textfield" stylesheets="@loginDesign.css" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" />
+                                <Button fx:id="su_signupBtn" layoutX="74.0" layoutY="397.0" mnemonicParsing="false" onAction="#regBtn" prefHeight="45.0" prefWidth="152.0" styleClass="login-btn" stylesheets="@loginDesign.css" text="سجل الآن">
+                                    <font>
+                                        <Font name="System Bold" size="15.0" />
+                                    </font>
+                                </Button>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="fp_question_form" layoutX="310.0" layoutY="10.0" prefHeight="405.0" prefWidth="300.0" styleClass="white-form" stylesheets="@loginDesign.css" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <children>
+                                <Label alignment="CENTER" layoutX="73.0" layoutY="60.0" nodeOrientation="RIGHT_TO_LEFT" styleClass="head-label" stylesheets="@loginDesign.css" text="هل نسيت كلمة المرور" textFill="#1c1c1c" AnchorPane.rightAnchor="42.0">
+                                    <font>
+                                        <Font name="System Bold" size="20.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="fp_username" alignment="CENTER_RIGHT" layoutX="40.0" layoutY="166.0" prefHeight="38.0" prefWidth="221.0" promptText="اسم المستخدم" styleClass="textfield" stylesheets="@loginDesign.css" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" />
+                                <ComboBox fx:id="fp_question" layoutX="40.0" layoutY="220.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="38.0" prefWidth="221.0" promptText="سؤال" styleClass="textfield" stylesheets="@loginDesign.css" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" />
+                                <TextField fx:id="fp_answer" alignment="CENTER_RIGHT" layoutX="40.0" layoutY="276.0" prefHeight="38.0" prefWidth="221.0" promptText="الاجابة" styleClass="textfield" stylesheets="@loginDesign.css" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" />
+                                <Button fx:id="fp_proceedBtn" layoutX="76.0" layoutY="366.0" mnemonicParsing="false" onAction="#proceedBtn" prefHeight="45.0" prefWidth="152.0" styleClass="login-btn" stylesheets="@loginDesign.css" text="تعديل" AnchorPane.leftAnchor="76.0" AnchorPane.rightAnchor="76.0">
+                                    <font>
+                                        <Font name="System Bold" size="15.0" />
+                                    </font>
+                                </Button>
+                                <Button fx:id="fb_back" layoutX="112.0" layoutY="433.0" mnemonicParsing="false" onAction="#backBtn" prefHeight="34.0" prefWidth="77.0" styleClass="login-btn" stylesheets="@loginDesign.css" text="رجوع">
+                                    <graphic>
+                                        <FontAwesomeIconView fill="WHITE" glyphName="ANGLE_LEFT" size="1.5em" />
+                                    </graphic>
+                                </Button>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="side_form" prefHeight="490.0" prefWidth="950.0" styleClass="gradient" stylesheets="@loginDesign.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="300.0" AnchorPane.topAnchor="0.0">
+                            <children>
+                                <Label alignment="CENTER" layoutX="56.0" layoutY="354.0" prefHeight="30.0" prefWidth="192.0" text="انشاء حساب جديد" textFill="WHITE" AnchorPane.bottomAnchor="118.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0">
+                                    <font>
+                                        <Font name="System Bold" size="20.0" />
+                                    </font>
+                                </Label>
+                                <Button fx:id="side_CreatBtn" layoutX="40.0" layoutY="397.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="46.0" prefWidth="221.0" styleClass="create-btn" stylesheets="@loginDesign.css" text="انشاء حساب" AnchorPane.bottomAnchor="59.0" AnchorPane.rightAnchor="39.0">
+                                    <font>
+                                        <Font name="System Bold" size="15.0" />
+                                    </font>
+                                </Button>
+                                <Button fx:id="side_alreadyHave" layoutX="41.0" layoutY="397.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="46.0" prefWidth="221.0" styleClass="create-btn" stylesheets="@loginDesign.css" text="لديك حساب بالفعل" visible="false">
+                                    <font>
+                                        <Font name="System Bold" size="15.0" />
+                                    </font>
+                                </Button>
+                                <FontAwesomeIconView fill="WHITE" glyphName="HOME" layoutX="40.0" layoutY="234.0" size="20em" text="" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.142852783203125" AnchorPane.topAnchor="14.0" />
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="np_newPasswordFrom" layoutX="320.0" layoutY="20.0" prefHeight="405.0" prefWidth="300.0" styleClass="white-form" stylesheets="@loginDesign.css" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <children>
+                                <Label alignment="CENTER" contentDisplay="CENTER" layoutX="40.0" layoutY="60.0" nodeOrientation="RIGHT_TO_LEFT" styleClass="head-label" stylesheets="@loginDesign.css" text="كلمة المرور الجديدة" textFill="#1c1c1c" AnchorPane.rightAnchor="42.0">
+                                    <font>
+                                        <Font name="System Bold" size="20.0" />
+                                    </font>
+                                </Label>
+                                <PasswordField fx:id="np_newPassword" alignment="CENTER_RIGHT" layoutX="40.0" layoutY="200.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="38.0" prefWidth="221.0" promptText="كلمة المرور" styleClass="textfield" stylesheets="@loginDesign.css" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" />
+                                <PasswordField fx:id="np_confirmPassword" alignment="CENTER_RIGHT" layoutX="40.0" layoutY="254.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="38.0" prefWidth="221.0" promptText="تاكيد كلمة المرور" styleClass="textfield" stylesheets="@loginDesign.css" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" />
+                                <Button fx:id="np_changePassBtn" layoutX="75.0" layoutY="366.0" mnemonicParsing="false" onAction="#changePassBtn" prefHeight="45.0" prefWidth="152.0" styleClass="login-btn" stylesheets="@loginDesign.css" text="تغير كلمة المرور">
+                                    <font>
+                                        <Font name="System Bold" size="15.0" />
+                                    </font>
+                                </Button>
+                                <Button fx:id="nb_back" alignment="CENTER" layoutX="112.0" layoutY="433.0" mnemonicParsing="false" onAction="#backBtn" prefHeight="34.0" prefWidth="77.0" styleClass="login-btn" stylesheets="@loginDesign.css" text="رجوع" textAlignment="CENTER">
+                                    <graphic>
+                                        <FontAwesomeIconView fill="WHITE" glyphName="ANGLE_LEFT" size="1.5em" />
+                                    </graphic>
+                                </Button>
+                            </children>
+                        </AnchorPane>
+                    </children>
+                </AnchorPane>
+            </children>
+        </AnchorPane>
+    </children>
+</StackPane>
