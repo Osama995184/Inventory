@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.2.final using JasperReports Library version 6.21.2-8434a0bd7c3bbc37cbf916f2968d35e4b165821a  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d4c98f48-3a62-435c-9878-5d3568de34f2">
+	<property name="ireport.zoom" value="1.4641000000000004"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<parameter name="fromDate" class="java.lang.String"/>
+	<parameter name="toDate" class="java.lang.String"/>
+	<parameter name="Report" class="java.lang.String"/>
+	<field name="cashPay" class="java.lang.Double"/>
+	<field name="invoice_id" class="java.lang.Integer"/>
+	<field name="instaPay" class="java.lang.Double"/>
+	<field name="clientPhone" class="java.lang.String"/>
+	<field name="clientName" class="java.lang.String"/>
+	<field name="vodafonePay" class="java.lang.Double"/>
+	<field name="username" class="java.lang.String"/>
+	<field name="deffered" class="java.lang.Double"/>
+	<field name="invoice_date" class="java.lang.String"/>
+	<field name="total_price_after_discount" class="java.lang.Double"/>
+	<field name="discount_percentage" class="java.lang.Double"/>
+	<field name="total_price_before_discount" class="java.lang.Double"/>
+	<field name="total_quantity" class="java.lang.Double"/>
+	<variable name="totalCash" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{cashPay}]]></variableExpression>
+	</variable>
+	<variable name="totalInstaPay" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{instaPay}]]></variableExpression>
+	</variable>
+	<variable name="totalVodafone" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{vodafonePay}]]></variableExpression>
+	</variable>
+	<variable name="totalDefferd" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{deffered}]]></variableExpression>
+	</variable>
+	<variable name="beforD" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{total_price_before_discount}]]></variableExpression>
+	</variable>
+	<variable name="totalDiscount" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{discount_percentage}]]></variableExpression>
+	</variable>
+	<variable name="totalPrice" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{total_price_after_discount}]]></variableExpression>
+	</variable>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="51" splitType="Stretch">
+			<staticText>
+				<reportElement x="300" y="0" width="74" height="51" uuid="f3cbe2c3-99c6-44ca-9f0b-f814310c6bd3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[من تاريخ:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="200" y="0" width="100" height="51" uuid="c8987e7e-f5b4-4d5a-9642-cb718f0fcadf"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{fromDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="100" height="51" uuid="a35f3b24-f759-4d3d-a27f-f0293734764c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{toDate}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="100" y="0" width="76" height="51" uuid="054f1dd7-72ac-4477-9196-6671038fec1a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[الى تاريخ:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="640" y="0" width="162" height="50" uuid="015c02b5-e06e-411a-967b-b1e97d3725ee"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="22" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Report}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy h.mm a">
+				<reportElement x="488" y="0" width="152" height="50" uuid="a29690ed-ad58-405a-99a7-3722ec6b5fbd"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="22" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="61" height="20" uuid="f0bf2665-da3b-42ad-8017-6a4f2cb61d41"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[التاريخ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="61" y="0" width="61" height="20" uuid="6f13abd2-19b2-4afc-83b6-339e0bc6585e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[اجمالى السعر]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="122" y="0" width="61" height="20" uuid="e3c73602-78a4-4c13-8250-46ecc087fdb6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[الخصم]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="183" y="0" width="61" height="20" uuid="c01c9a4a-ba80-4264-982f-dfc8facba7f9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[قبل الخصم]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="244" y="0" width="61" height="20" uuid="7d78c974-fb53-45f0-bf46-4c27c5b5a566"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[الاجل]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="305" y="0" width="61" height="20" uuid="e519305d-c45c-489f-bae9-21460739864f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[فودافون]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="366" y="0" width="70" height="20" uuid="7c2bd7e7-ab94-4b32-9ea8-49de9f8072ee"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[انستا باى]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="680" y="0" width="61" height="20" uuid="79693682-f9a0-47e1-896e-869c1200fa5a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[الموظف]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="741" y="0" width="61" height="20" uuid="2b383846-bd48-46a4-b536-b281c1da300f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[رقم الفاتورة]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="21" width="802" height="1" uuid="0372f227-01ec-42fb-98b3-be736df0c166"/>
+			</line>
+			<staticText>
+				<reportElement x="619" y="0" width="61" height="20" uuid="7a3509be-7b18-4102-8e75-fe23ea532968"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[العميل]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="558" y="0" width="61" height="20" uuid="47bd4396-c5a0-4665-9592-d0c8e63a3e8e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[الهاتف]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="497" y="0" width="61" height="20" uuid="da92ad50-bcdc-48f1-bd60-ef032482b48c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[الكمية]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="436" y="0" width="61" height="20" uuid="f35f458f-b2d0-407b-a6bc-652ded3b50f7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[كاش]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="22" splitType="Stretch">
+			<textField>
+				<reportElement stretchType="RelativeToBandHeight" x="0" y="0" width="61" height="20" uuid="2819ef57-3bfc-49ae-b42b-ee0b822eb6e6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{invoice_date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement stretchType="RelativeToBandHeight" x="61" y="0" width="61" height="20" uuid="d1459829-d1fe-4e0f-a28a-de3bf73075b7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{total_price_after_discount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement stretchType="RelativeToBandHeight" x="122" y="0" width="61" height="20" uuid="1b863ea6-a5b7-40d7-9124-c169168ff0e5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{discount_percentage}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement stretchType="RelativeToBandHeight" x="183" y="0" width="61" height="20" uuid="87d753ff-2e56-434f-8fd8-921fc59d6318"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{total_price_before_discount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement stretchType="RelativeToBandHeight" x="244" y="0" width="61" height="20" uuid="ca49a82c-4975-4525-9c6d-23a62ceb6867"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{deffered}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement stretchType="RelativeToBandHeight" x="305" y="0" width="61" height="20" uuid="c720868e-456e-4f98-9387-989c5d82bad8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{vodafonePay}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement stretchType="RelativeToBandHeight" x="366" y="0" width="70" height="20" uuid="ddfadd76-0f10-4ca6-887f-7e7a9f84c3a6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{instaPay}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement stretchType="RelativeToBandHeight" x="680" y="0" width="61" height="20" uuid="ba2e9a3b-5ea9-4a88-9f7d-9b9dfde9d8e1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{username}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement stretchType="RelativeToBandHeight" x="741" y="0" width="61" height="20" uuid="79d34a12-ba2d-449e-950d-89c5c6804295"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{invoice_id}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="21" width="802" height="1" uuid="e70e6d2b-2033-4f47-a156-c6cde7e7f964"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement stretchType="RelativeToBandHeight" x="619" y="0" width="61" height="20" uuid="042e18b7-d527-4608-a67e-90d0649eed92"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{clientName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement stretchType="RelativeToBandHeight" x="558" y="0" width="61" height="20" uuid="51effe1b-23d9-4308-8b04-90db0dbe9a20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{clientPhone}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement stretchType="RelativeToBandHeight" x="497" y="0" width="61" height="20" uuid="49f1496f-c2b8-4c30-9f2a-57ee23ddfd72"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{total_quantity}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement stretchType="RelativeToBandHeight" x="436" y="0" width="61" height="20" uuid="40254d19-3b02-44e3-8c02-cdfbd0adf338"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cashPay}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="30">
+			<staticText>
+				<reportElement mode="Opaque" x="497" y="0" width="304" height="30" backcolor="#B8B8B8" uuid="0593f460-8bb6-4b74-8a69-7784e17f23c7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[الاجمالي]]></text>
+			</staticText>
+			<textField>
+				<reportElement mode="Opaque" x="436" y="0" width="61" height="30" backcolor="#B8B8B8" uuid="213fd47e-300e-464c-822e-29a90f6943e9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{totalCash}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="366" y="0" width="70" height="30" backcolor="#B8B8B8" uuid="fd780bde-610f-45f0-be98-af8a987bfee6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{totalInstaPay}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="305" y="0" width="61" height="30" backcolor="#B8B8B8" uuid="d2e0b997-ea83-48c7-9895-5cc7e4be505f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{totalVodafone}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="244" y="0" width="61" height="30" backcolor="#B8B8B8" uuid="9cc00b01-fbd3-4523-877f-d151c8069406"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{totalDefferd}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="183" y="0" width="61" height="30" backcolor="#B8B8B8" uuid="96c0e342-a804-463d-bc23-8097e5a6acfa"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{beforD}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="122" y="0" width="61" height="30" backcolor="#B8B8B8" uuid="a877d20a-35c5-466d-8a27-239ba4963d11"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{totalDiscount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="61" y="0" width="61" height="30" backcolor="#B8B8B8" uuid="f3446cc8-286a-4c6a-8940-4d2ee6590088"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{totalPrice}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

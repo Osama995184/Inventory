@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.2.final using JasperReports Library version 6.21.2-8434a0bd7c3bbc37cbf916f2968d35e4b165821a  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" columnDirection="RTL" pageWidth="226" pageHeight="496" columnWidth="216" leftMargin="5" rightMargin="5" topMargin="5" bottomMargin="5" isIgnorePagination="true" uuid="b3cfcaa4-0b39-4a6d-a932-0348df8d629c">
+	<property name="ireport.zoom" value="1.331000000000002"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="net.sf.jasperreports.print.keep.full.text" value="true"/>
+	<property name="net.sf.jasperreports.page.break.no.pagination" value="true"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<parameter name="Cname" class="java.lang.String"/>
+	<parameter name="Cphone" class="java.lang.String"/>
+	<parameter name="Cadd" class="java.lang.String"/>
+	<parameter name="deffered" class="java.lang.String"/>
+	<parameter name="total" class="java.lang.String"/>
+	<parameter name="RID" class="java.lang.String"/>
+	<parameter name="totalPay" class="java.lang.String"/>
+	<parameter name="discount" class="java.lang.String"/>
+	<parameter name="totalQuantity" class="java.lang.String"/>
+	<parameter name="companyName" class="java.lang.String"/>
+	<parameter name="cashier" class="java.lang.String"/>
+	<parameter name="companyPhone" class="java.lang.String"/>
+	<parameter name="companyAddress" class="java.lang.String"/>
+	<parameter name="companyWeb" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[]]>
+	</queryString>
+	<field name="model" class="java.lang.String"/>
+	<field name="quantity" class="java.lang.Double"/>
+	<field name="price" class="java.lang.Double"/>
+	<field name="totalP" class="java.lang.Double"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="224" splitType="Stretch">
+			<textField isBlankWhenNull="true">
+				<reportElement x="3" y="123" width="210" height="23" uuid="fa8aa719-8d0c-42d6-8d6c-b8267dff5127"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{companyName}]]></textFieldExpression>
+			</textField>
+			<image scaleImage="RetainShape" hAlign="Center" vAlign="Top">
+				<reportElement mode="Transparent" x="30" y="0" width="150" height="122" forecolor="#000000" backcolor="#FFFFFF" uuid="0ba4b2ef-af6f-4414-9fcf-2d7af9b89524"/>
+				<graphicElement fill="Solid"/>
+				<imageExpression><![CDATA[this.getClass().getResourceAsStream("/images/logo.png")]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="195" y="158" width="20" height="20" uuid="e037bdbb-fda4-475e-b001-b9f7f78359c1">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<imageExpression><![CDATA[this.getClass().getResourceAsStream("/images/reports images/phone.png")]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement mode="Opaque" x="3" y="158" width="187" height="20" backcolor="#FFFFFF" uuid="46a77f7d-badf-450d-a075-a22e5dea3048"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{companyPhone}]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="195" y="181" width="20" height="20" uuid="0e713739-eb49-4de0-af6a-a83286ac0600">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<imageExpression><![CDATA[this.getClass().getResourceAsStream("/images/reports images/address.png")]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement mode="Opaque" x="3" y="181" width="187" height="20" backcolor="#FFFFFF" uuid="3386df81-841c-4456-bec8-8cd165df4ab5"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{companyAddress}]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="195" y="204" width="20" height="20" uuid="8d728b31-45a4-4026-9381-1cfab7bf9f0f">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<imageExpression><![CDATA[this.getClass().getResourceAsStream("/images/reports images/web.png")]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement mode="Opaque" x="3" y="204" width="187" height="20" backcolor="#FFFFFF" uuid="a77a2f2f-1aec-4cec-bebe-f85e77d1160a"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{companyWeb}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="56" splitType="Stretch">
+			<textField>
+				<reportElement x="134" y="33" width="81" height="23" uuid="8af7e228-181b-427c-a03d-c5de11b7c9fc"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{cashier}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy h.mm a">
+				<reportElement x="3" y="33" width="131" height="23" uuid="bba4f7a8-c29c-44c4-8980-9d5af29c649e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="160" y="7" width="54" height="26" backcolor="#FFFFFF" uuid="9c93c63b-426f-4c97-99ef-25fb5e85da59"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[رقم الفاتورة: ]]></text>
+			</staticText>
+			<textField>
+				<reportElement mode="Opaque" x="33" y="7" width="124" height="26" backcolor="#FFFFFF" uuid="20ec3379-cbc3-4121-8f0e-8b856ce8969f"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{RID}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="21" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="-1" width="215" height="1" uuid="d9cfd55f-0186-45f1-8d96-d053b08b42b7"/>
+			</line>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="50" height="20" backcolor="#B8B8B8" uuid="2d416962-defb-463f-bcc1-84961de0058d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[الاجمالي]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="50" y="0" width="40" height="20" backcolor="#B8B8B8" uuid="cd6c48a8-a72a-43c6-872f-fc55cab9b95e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[السعر]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="20" width="215" height="1" uuid="481f3e21-466b-4945-bed3-bd0bd67c1ac1"/>
+			</line>
+			<staticText>
+				<reportElement mode="Opaque" x="134" y="0" width="81" height="20" backcolor="#B8B8B8" uuid="255014a2-5442-424f-b053-e25f6385c480"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[الصنف]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="90" y="0" width="44" height="20" backcolor="#B8B8B8" uuid="5b80662c-9608-4740-b5b3-2d25e774bfef"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[الكمية]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="50" height="20" uuid="1e18ccd3-4178-4593-b9fc-cb216f937249"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{totalP}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="50" y="0" width="40" height="20" uuid="4dc8efd0-0012-4de2-af9c-4bb6d7a88460"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{price}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="134" y="0" width="81" height="20" uuid="eff37797-a37c-4e3d-beab-663e9247cc36"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{model}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="90" y="0" width="44" height="20" uuid="c5213402-bf3a-4713-ae59-33863771934d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{quantity}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="20" width="215" height="1" uuid="8f60ee7f-cb87-4750-ae7c-6eaf3ed648f6"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+	<summary>
+		<band height="152">
+			<staticText>
+				<reportElement mode="Opaque" x="136" y="98" width="78" height="26" backcolor="#B8B8B8" uuid="b5d3b210-c2fe-4a81-90ab-16f43dba14e3"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[اجمالي المبلغ: ]]></text>
+			</staticText>
+			<textField>
+				<reportElement mode="Opaque" x="0" y="98" width="136" height="26" backcolor="#B8B8B8" uuid="7a9f756b-25cd-4d77-8896-a360c20d8270"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{total}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="136" y="30" width="78" height="20" uuid="6d6b2fa5-9cf6-4b9b-8f64-2eea95429180"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[الخصم: ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="30" width="136" height="20" uuid="8512a07d-cc96-4b4b-953b-4da1ce67f289"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{discount}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="136" y="2" width="79" height="20" backcolor="#B8B8B8" uuid="e77ba697-0a61-4c8d-b540-f8131204b6c8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[اجمالى الكمية:]]></text>
+			</staticText>
+			<textField>
+				<reportElement mode="Opaque" x="0" y="2" width="136" height="20" backcolor="#B8B8B8" uuid="b6e309a4-34f7-4c9b-8390-d7c0c246c446"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{totalQuantity}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="136" y="50" width="78" height="20" uuid="df573c7a-5254-48a0-9eae-97f933726e75"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[اجمالى الدفع:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="50" width="136" height="20" uuid="b721acf7-420a-4caa-8af7-9fc81b23abe7"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{totalPay}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="136" y="70" width="78" height="20" backcolor="#FFFFFF" uuid="ef996edf-0928-430d-a037-a88b29086536"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[الاجل:]]></text>
+			</staticText>
+			<textField>
+				<reportElement mode="Opaque" x="0" y="70" width="136" height="20" backcolor="#FFFFFF" uuid="087c5f6a-ed55-46a7-a8d7-386c2e22fa50"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{deffered}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="33" y="130" width="145" height="22" uuid="da787108-5396-4058-a845-a43c6e9e87d3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[شكرا لكم ...]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>
